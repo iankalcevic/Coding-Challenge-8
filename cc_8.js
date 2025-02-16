@@ -108,3 +108,15 @@ let cart = createCartTracker();
 
 cart(20); //Expected output: $20
 cart(35); //Expected output: $55
+
+// Task 8 - Savings Growth Projection
+
+function calculateSavings(years, amount) {
+
+    if (years >= 10) return 'Projected savings: $${amount.toFixed(2)}'; //Years reached 10
+
+    return calculateSavings(years + 1, amount * 1.05); //Increase by 5%
+};
+
+console.log(calculateSavings(8, 1000)); //Expected output: $1102.50
+console.log(calculateSavings(5, 5000)); //Expected output: $6381.41
